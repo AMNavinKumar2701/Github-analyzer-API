@@ -1,0 +1,153 @@
+{
+  "info": {
+    "name": "GitHub Profile Analyzer API",
+    "description": "API collection for the GitHub Profile Analyzer Node.js Assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Analyze New Profile",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/profiles/analyze/torvalds",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "profiles",
+            "analyze",
+            "torvalds"
+          ]
+        },
+        "description": "Fetches data from GitHub, analyzes it, and saves it to the database."
+      },
+      "response": []
+    },
+    {
+      "name": "2. Get All Profiles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/profiles?page=1&limit=10&sort=analyzed_at&order=DESC",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "profiles"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            },
+            {
+              "key": "sort",
+              "value": "analyzed_at"
+            },
+            {
+              "key": "order",
+              "value": "DESC"
+            }
+          ]
+        },
+        "description": "Retrieves all analyzed profiles from the database with pagination."
+      },
+      "response": []
+    },
+    {
+      "name": "3. Get Single Profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/profiles/torvalds",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "profiles",
+            "torvalds"
+          ]
+        },
+        "description": "Fetches a specific profile from the database."
+      },
+      "response": []
+    },
+    {
+      "name": "4. Get Summary Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/profiles/stats/summary",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "profiles",
+            "stats",
+            "summary"
+          ]
+        },
+        "description": "Gets aggregate statistics across all analyzed profiles."
+      },
+      "response": []
+    },
+    {
+      "name": "5. Delete Profile",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/profiles/torvalds",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "profiles",
+            "torvalds"
+          ]
+        },
+        "description": "Deletes a profile from the database."
+      },
+      "response": []
+    },
+    {
+      "name": "6. Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "health"
+          ]
+        },
+        "description": "API health check endpoint."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://github-analyzer-api-1jpl.onrender.com",
+      "type": "string"
+    }
+  ]
+}
