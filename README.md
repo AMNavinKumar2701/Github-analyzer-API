@@ -3,7 +3,10 @@
 A production-ready Node.js + Express + MySQL backend that fetches GitHub user profiles, computes enriched insights, and stores them for querying.
 
 ---
+#Live Deployed Url Link :-
+https://github-analyzer-api-1jpl.onrender.com/
 
+---
 ## Tech Stack
 
 | Layer      | Technology                    |
